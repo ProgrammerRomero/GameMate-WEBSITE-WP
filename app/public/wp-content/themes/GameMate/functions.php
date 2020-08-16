@@ -1,0 +1,27 @@
+
+
+<?php
+    //To Open MENU option into Appearance nav into WP dashboard
+    function gamemate_menus() {
+        // register a new function
+        register_nav_menus(array(
+            'main-menu' => __( 'Menu Principal', 'gamemate' )
+        ));
+    }
+
+    //run this function when WP starts
+    add_action('init', 'gamemate_menus');
+
+    //Scrips and Styles
+    function gamemate_scripts_styles() {
+
+        //Load normalize file from css folder
+        wp_enqueue_style('normalize', get_template_directory_uri().'/css/normalize.css', array(), '8.0.1');
+        //Load Fonts from google
+        wp_enqueue_style('googleFonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700;900&family=Staatliches&display=swap', array(), '1.0.0');
+        
+        //load Main styles
+        wp_enqueue_style('style', get_stylesheet_uri(), array('normalize', 'googleFonts'), '1.0.0');
+    }
+    add_action('wp_enqueue_scripts', 'gamemate_scripts_styles');
+?>
