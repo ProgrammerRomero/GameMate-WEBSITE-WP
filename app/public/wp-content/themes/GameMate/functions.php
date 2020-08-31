@@ -22,6 +22,14 @@
         
         //load Main styles
         wp_enqueue_style('style', get_stylesheet_uri(), array('normalize', 'googleFonts'), '1.0.0');
+
+        //Load slick animation
+        // wp_enqueue_style('slicknavCSS', 'https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css', array(), '1.0.0');
+        wp_enqueue_style('slicknavcss', get_template_directory_uri().'/css/slicknav.css' , array('normalize'), '1.0.10');
+        // wp_enqueue_script('slicknavJs', 'https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js', array('jquery'), '1.0.0', true);
+        wp_enqueue_script('slicknavjs', get_template_directory_uri().'/js/jquery.slicknav.min.js' , array('jquery'), '1.0.10', true);
+        wp_enqueue_script('scripts', get_template_directory_uri().'/js/script.js', array('jquery', 'slicknavJS'), '1.0.0', true);
+        
     }
     add_action('wp_enqueue_scripts', 'gamemate_scripts_styles');
 ?>

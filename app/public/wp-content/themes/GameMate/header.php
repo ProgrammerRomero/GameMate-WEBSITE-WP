@@ -13,14 +13,14 @@
     <div class="contenedor">
         <div class="barra-navegacion">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/GameMate.png" alt="slogo site">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/GameMate.png" width="200px" height="200px" alt="slogo site">
             </div>
             <?php
             //Bring the Menu into the header from function.php
                 $args = array(
                     'theme_location' => 'main-menu', 
                     'container' => 'nav',
-                    'container_class' => 'main_menu'
+                    'container_class' => 'main-menu'
                 );
                 wp_nav_menu($args);
             ?>
