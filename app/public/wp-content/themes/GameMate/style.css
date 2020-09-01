@@ -89,6 +89,10 @@ img {
     margin: 0 auto;
 }
 
+hr {
+    border: 1px solid var(--lightGrey);
+}
+
 .site-header {
     background-color: var(--darkgrey);
     padding: 2rem 0;
@@ -143,8 +147,8 @@ img {
         position: relative;
         z-index: 1;
     }
-    .menu a::before, 
-    .menu a::after {
+    .main-menu a::before, 
+    .main-menu a::after {
         position: absolute;
         left: 0;
         content: '';
@@ -156,23 +160,23 @@ img {
         transform: scaleX(0);
         transition: transform .6s;
     }
-    .menu a::before {
+    .main-menu a::before {
         top: 0;
         transform-origin: left;
     }
-    .menu a::after {
+    .main-menu a::after {
         top: 50%;
         transform-origin: right;
     }
-    .menu a:hover::before {
+    .main-menu a:hover::before {
         transform: scaleX(1);
     }
-    .menu a:hover::after {
+    .main-menu a:hover::after {
         transform: scaleX(1);
     }
 }
 
-.menu .current_page_item {
+.main-menu .current_page_item {
     border-bottom: 3px solid var(--primaryColor);
 }
 
@@ -206,5 +210,59 @@ img {
 .slicknav_nav a:hover {
     background: transparent;
     color: var(--primaryColor);
+}
 
+
+/* FOOTER */
+
+.footer-content {
+    padding: 4rem 0;
+
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site-footer .main-menu {
+    display: block;
+}
+
+.site-footer a {
+    color: var(--black);
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.site-footer .main-menu .current_page_item {
+    border: none;
+}
+
+@media (min-width: 768px) { 
+    .site-footer .main-menu .current_page_item {
+        border-bottom: 1px solid var(--primaryColor);
+    }
+}
+
+.site-footer .main-menu a::before, 
+.site-footer .main-menu a::after {
+    display: none;
+
+}
+
+.copyright {
+    text-align: center;
+    font-family: var(--mainFont);
+    font-size: 1.8em;
+    margin: 1rem 0 0 0;
+}
+
+@media (mid-width: 768px) {
+    .copyright {
+        font-size: 2.4rem;
+        margin: 0;
+    }
 }
