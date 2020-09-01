@@ -176,3 +176,35 @@ img {
     border-bottom: 3px solid var(--primaryColor);
 }
 
+/* Reedit style menus */
+
+.slicknav_menu {
+    background-color: var(--darkgrey);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slicknav_btn {
+    background-color: var(--primaryColor);
+    margin: 3rem 0;
+    padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .slicknav_menu {
+        display: none;
+    }
+}
+
+.slicknav_nav a {
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: var(--mainFont);
+}
+
+.slicknav_nav a:hover {
+    background: transparent;
+    color: var(--primaryColor);
+
+}

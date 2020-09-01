@@ -4,6 +4,9 @@
 alert('funciona');
 
 
-jQuery(document).ready( $ => {
-    $('.main-menu #menu-menu-1').slicknav();
-});
+jQuery(document).ready(function($) {
+    $('.menu-principal .menu').last().addClass('last').slicknav({
+        label: '',
+        appendTo: '.site-header'
+    });
+  });
