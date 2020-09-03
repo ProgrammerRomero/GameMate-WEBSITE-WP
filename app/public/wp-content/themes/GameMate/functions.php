@@ -2,6 +2,8 @@
 
 <?php
 
+    //Reuse Queries
+    require get_template_directory() . '/inc/queries.php';
 
     //when theme is activated
     function gamemate_setup() {
