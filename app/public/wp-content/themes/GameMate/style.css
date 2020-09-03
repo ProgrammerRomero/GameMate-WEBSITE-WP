@@ -253,6 +253,7 @@ hr {
     color: var(--black);
     text-align: center;
     font-size: 2.4rem;
+    padding: 0 1rem;
 }
 
 .site-footer .main-menu .current_page_item {
@@ -292,6 +293,7 @@ hr {
     margin-bottom: 4rem;
 }
 
+/* TEMPLATE 1 */
 @media (min-width: 768px) {
 
     .pagina.con-sidebar {
@@ -304,4 +306,15 @@ hr {
     .con-sidebar .sidebar {
         flex: 0 0 calc(35% - 2rem);
     }
+}
+
+/* No Sidebar */
+
+.no-sidebar {
+    display: flex;
+    justify-content: center;
+}
+
+.no-sidebar .contenido-principal {
+    flex: 0 1 800px;
 }

@@ -18,7 +18,7 @@
             </div>
         </footer>
 
-        //to show WP menu bar when login
+        <!-- to show WP menu bar when login -->
         <?php wp_footer(); ?>
     </body>
 </html>
