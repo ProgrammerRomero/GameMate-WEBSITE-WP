@@ -44,8 +44,43 @@ class GameMate_Classes_Widget extends WP_Widget {
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
-		echo esc_html__( 'Hello, World!', 'text_domain' );
-		echo $args['after_widget'];
+        $amount = $instance['amount'];
+        if($amount == '') {
+            $amount == 4;
+        }
+        ?>
+        <ul>
+            <?php
+                $args = array(
+                    'post_type' => 'gymfitness_clases',
+                    'posts_per_page' => $amount
+                );
+                $clases = new WP_Query($args);
+                while($clases->have_posts()) : $clases->the_post();
+                
+            ?>
+            <li class="clase-sidebar">
+                <div class="imagen">
+                    <?php the_post_thumbnail('thumbnail'); ?>
+                </div>
+
+                <div class="contenido-clase">
+                    <a href="<?php the_permalink(); ?>">
+                        <h3><?php the_title(); ?></h3>
+                    </a>
+
+                    <?php
+                        $start_time = get_field('start_time');
+                        $end_time = get_field('end_time');
+                    ?>
+                    <p><?php the_field('tournament_days'); ?> - <?php echo $start_time . " to " . $end_time; ?></p>
+
+                </div>
+            </li>
+                <?php endwhile; wp_reset_postdata(); ?>
+        </ul>
+        <?php
+		    echo $args['after_widget'];
 	}
 
 	/**
@@ -56,12 +91,21 @@ class GameMate_Classes_Widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'New title', 'text_domain' );
-		?>
-		<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'text_domain' ); ?></label> 
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
-		</p>
+        $amount = !empty($instance['amount'] ) ? $instance['amount'] : esc_html__('How many classes do you wanna show?', 'gamemate'); 
+        ?>
+        <p>
+            <label for="<?php echo esc_attr($this->get_field_id('amount')) ?>">
+                <?php esc_attr_e('How many classes do you wanna show?'); ?>
+            </label>
+            <input 
+                class="widefat"
+                id="<?php echo esc_attr( $this->get_field_id('amount') ) ?>"
+                name="<?php echo esc_attr( $this->get_field_id('amount') ) ?>"
+                type="number"
+                value="<?php echo esc_attr( $amount ) ?>"
+                
+                />
+        </p>
 		<?php 
 	}
 
@@ -77,7 +121,7 @@ class GameMate_Classes_Widget extends WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
+		$instance['amount'] = ( ! empty( $new_instance['amount'] ) ) ? sanitize_text_field( $new_instance['amount'] ) : '';
 
 		return $instance;
 	}
