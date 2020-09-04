@@ -410,3 +410,43 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
         color: var(--primaryColor);
     }
 }
+
+/* Sidebar Classes */
+.clase-sidebar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--lightGrey);
+}
+
+.clase-sidebar:last-of-type {
+    border-bottom: none;
+}
+
+.clase-sidebar .imagen img {
+    display: block;
+}
+
+.clase-sidebar .imagen {
+    flex: 0 0 30%;
+}
+
+.clase-sidebar .contenido-clase {
+    flex: 0 0 calc(70% -2rem);
+    margin-left: 20px;
+}
+
+.clase-sidebar .contenido-clase h3 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.clase-sidebar .contenido-clase a {
+    color: var(--primaryColor);
+}
+
+.clase-sidebar .contenido-clase p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
