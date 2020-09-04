@@ -54,5 +54,28 @@
     }
     add_action('wp_enqueue_scripts', 'gamemate_scripts_styles');
 
+    //Define WIDGETS ZONE
+    function gamemate_widgets() {
+        register_sidebar(array(
+            'name' => 'Sidebar1',
+            'id' => 'sidebar_1',
+            'before_widget' => '<div class="widget">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="text-center texto-primario">',
+            'after_title' => '</h3>'
 
-?>
+        ));
+        register_sidebar(array(
+            'name' => 'Sidebar2',
+            'id' => 'sidebar_2',
+            'before_widget' => '<div class="widget">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="text-center texto-primario">',
+            'after_title' => '</h3>'
+
+        ));
+    }
+    add_action('widgets_init', 'gamemate_widgets');
+    
+    
+    ?>

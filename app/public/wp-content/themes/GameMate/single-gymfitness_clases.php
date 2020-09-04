@@ -1,15 +1,13 @@
 
 
 
-
 <?php get_header(); ?>
 
-<main class="contenedor pagina seccion no-sidebar">
-    <div class="text-center">
+<main class="contenedor pagina seccion con-sidebar">
+    <div class="contenido-principal">
         <?php get_template_part('template-parts/paginas'); ?>
-
-        <?php gamemate_list_classes(); ?>
     </div>
+    <?php get_sidebar('classes'); ?>
 </main>
 
 <?php get_footer(); ?>

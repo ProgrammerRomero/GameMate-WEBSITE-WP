@@ -13,7 +13,7 @@ function gamemate_list_classes() { ?>
             $classes = new WP_Query($args);
             while( $classes->have_posts() ): $classes->the_post();  ?>
 
-            <li class="clase card">
+            <li class="clase card gradient">
                 <?php the_post_thumbnail('medium'); ?>
                 <div class="contenido">
                     <a href="<?php the_permalink(); ?>">
