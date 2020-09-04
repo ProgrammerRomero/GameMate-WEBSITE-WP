@@ -463,3 +463,66 @@ Stack trace:
 #2 C:\Users\julia\Local Sites\gamemate\app\public\index.php(17): require('C:\\Users\\julia\\...')
 #3 {main}
   thrown in C:\Users\julia\Local Sites\gamemate\app\public\wp-content\themes\GameMate\page.php on line 9
+[04-Sep-2020 15:24:39 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'register_foo_widget' not found or invalid function name in C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php on line 287
+[04-Sep-2020 15:24:39 UTC] PHP Stack trace:
+[04-Sep-2020 15:24:39 UTC] PHP   1. {main}() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\admin-ajax.php:0
+[04-Sep-2020 15:24:39 UTC] PHP   2. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\admin-ajax.php:22
+[04-Sep-2020 15:24:39 UTC] PHP   3. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-load.php:37
+[04-Sep-2020 15:24:39 UTC] PHP   4. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-config.php:77
+[04-Sep-2020 15:24:39 UTC] PHP   5. do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-settings.php:546
+[04-Sep-2020 15:24:39 UTC] PHP   6. WP_Hook->do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\plugin.php:478
+[04-Sep-2020 15:24:39 UTC] PHP   7. WP_Hook->apply_filters() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:311
+[04-Sep-2020 15:24:39 UTC] PHP   8. wp_widgets_init() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:287
+[04-Sep-2020 15:24:39 UTC] PHP   9. do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\widgets.php:1773
+[04-Sep-2020 15:24:39 UTC] PHP  10. WP_Hook->do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\plugin.php:478
+[04-Sep-2020 15:24:39 UTC] PHP  11. WP_Hook->apply_filters() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:311
+[04-Sep-2020 15:24:40 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'register_foo_widget' not found or invalid function name in C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php on line 287
+[04-Sep-2020 15:24:40 UTC] PHP Stack trace:
+[04-Sep-2020 15:24:40 UTC] PHP   1. {main}() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\widgets.php:0
+[04-Sep-2020 15:24:40 UTC] PHP   2. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\widgets.php:10
+[04-Sep-2020 15:24:40 UTC] PHP   3. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\admin.php:34
+[04-Sep-2020 15:24:40 UTC] PHP   4. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-load.php:37
+[04-Sep-2020 15:24:40 UTC] PHP   5. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-config.php:77
+[04-Sep-2020 15:24:40 UTC] PHP   6. do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-settings.php:546
+[04-Sep-2020 15:24:40 UTC] PHP   7. WP_Hook->do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\plugin.php:478
+[04-Sep-2020 15:24:40 UTC] PHP   8. WP_Hook->apply_filters() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:311
+[04-Sep-2020 15:24:40 UTC] PHP   9. wp_widgets_init() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:287
+[04-Sep-2020 15:24:40 UTC] PHP  10. do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\widgets.php:1773
+[04-Sep-2020 15:24:40 UTC] PHP  11. WP_Hook->do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\plugin.php:478
+[04-Sep-2020 15:24:40 UTC] PHP  12. WP_Hook->apply_filters() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:311
+[04-Sep-2020 15:24:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:287) in C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\functions.php on line 6270
+[04-Sep-2020 15:24:40 UTC] PHP Stack trace:
+[04-Sep-2020 15:24:40 UTC] PHP   1. {main}() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\widgets.php:0
+[04-Sep-2020 15:24:40 UTC] PHP   2. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\widgets.php:10
+[04-Sep-2020 15:24:40 UTC] PHP   3. do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\admin.php:175
+[04-Sep-2020 15:24:40 UTC] PHP   4. WP_Hook->do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\plugin.php:478
+[04-Sep-2020 15:24:40 UTC] PHP   5. WP_Hook->apply_filters() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:311
+[04-Sep-2020 15:24:40 UTC] PHP   6. send_frame_options_header() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:285
+[04-Sep-2020 15:24:40 UTC] PHP   7. header() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\functions.php:6270
+[04-Sep-2020 15:24:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:287) in C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\includes\misc.php on line 1310
+[04-Sep-2020 15:24:40 UTC] PHP Stack trace:
+[04-Sep-2020 15:24:40 UTC] PHP   1. {main}() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\widgets.php:0
+[04-Sep-2020 15:24:40 UTC] PHP   2. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\widgets.php:10
+[04-Sep-2020 15:24:40 UTC] PHP   3. do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\admin.php:175
+[04-Sep-2020 15:24:40 UTC] PHP   4. WP_Hook->do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\plugin.php:478
+[04-Sep-2020 15:24:40 UTC] PHP   5. WP_Hook->apply_filters() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:311
+[04-Sep-2020 15:24:40 UTC] PHP   6. wp_admin_headers() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:287
+[04-Sep-2020 15:24:40 UTC] PHP   7. header() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\includes\misc.php:1310
+[04-Sep-2020 15:24:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:287) in C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\admin-header.php on line 9
+[04-Sep-2020 15:24:40 UTC] PHP Stack trace:
+[04-Sep-2020 15:24:40 UTC] PHP   1. {main}() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\widgets.php:0
+[04-Sep-2020 15:24:40 UTC] PHP   2. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\widgets.php:382
+[04-Sep-2020 15:24:40 UTC] PHP   3. header() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\admin-header.php:9
+[04-Sep-2020 15:25:42 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'register_foo_widget' not found or invalid function name in C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php on line 287
+[04-Sep-2020 15:25:42 UTC] PHP Stack trace:
+[04-Sep-2020 15:25:42 UTC] PHP   1. {main}() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\admin-ajax.php:0
+[04-Sep-2020 15:25:42 UTC] PHP   2. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-admin\admin-ajax.php:22
+[04-Sep-2020 15:25:42 UTC] PHP   3. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-load.php:37
+[04-Sep-2020 15:25:42 UTC] PHP   4. require_once() C:\Users\julia\Local Sites\gamemate\app\public\wp-config.php:77
+[04-Sep-2020 15:25:42 UTC] PHP   5. do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-settings.php:546
+[04-Sep-2020 15:25:42 UTC] PHP   6. WP_Hook->do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\plugin.php:478
+[04-Sep-2020 15:25:42 UTC] PHP   7. WP_Hook->apply_filters() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:311
+[04-Sep-2020 15:25:42 UTC] PHP   8. wp_widgets_init() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:287
+[04-Sep-2020 15:25:42 UTC] PHP   9. do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\widgets.php:1773
+[04-Sep-2020 15:25:42 UTC] PHP  10. WP_Hook->do_action() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\plugin.php:478
+[04-Sep-2020 15:25:42 UTC] PHP  11. WP_Hook->apply_filters() C:\Users\julia\Local Sites\gamemate\app\public\wp-includes\class-wp-hook.php:311
