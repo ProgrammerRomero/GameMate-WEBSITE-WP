@@ -13,7 +13,7 @@
 
         // Add Images to personalized sizes
         add_image_size('square', 350, 350, true);
-        add_image_size('portrait', 350, 724, true);
+        add_image_size('portrait', 350, 700, true);
         add_image_size('boxes', 400, 375, true);
         add_image_size('medium', 700, 400, true);
         add_image_size('blog', 966, 644, true);
