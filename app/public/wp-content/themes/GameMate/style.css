@@ -329,18 +329,34 @@ hr {
 
 
 /* CLASSES */
-.lista-clases {
+.lista-clases,
+.listado-blog {
     margin-top: 4rem;
 }
 
 @media (min-width: 768px) {
-    .lista-clases {
+    .lista-clases,
+    .listado-blog {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 }
 
+.listado-blog .card .contenido {
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .listado-blog .card .contenido {
+        text-align: left;
+    }
+}
+
+.listado-blog .card .contenido h3 {
+    margin: 0;
+}
 /* CARDS TOURNAMENT PAGE - GRADIENT*/
 @media (min-width: 768px) {
     .gradient::after {
@@ -362,12 +378,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .card {
     margin-bottom: 4rem;
+    border-bottom: 1px solid var(--lightGrey);
+}
+
+.card:last-of-type {
+    border: none;
 }
 
 @media (min-width: 768px) {
     .card {
         flex: 0 0 calc(50% - 2rem);
         position: relative;
+        border: none;
     }
 }
 /* .card img {
@@ -375,7 +397,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 } */
 
 .card .contenido {
-    padding: 3rem;
+    padding: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -410,6 +432,71 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
         color: var(--primaryColor);
     }
 }
+
+.card .contenido .meta,
+.card .contenido .meta a {
+    color: var(--black);
+}
+
+@media (min-width: 768px) {
+    .card .contenido .meta,
+    .card .contenido .meta a {
+    color: var(--white);
+    }
+}
+
+.card .contenido .meta span {
+    color: var(--primaryColor);
+}
+
+.card .contenido .meta {
+    font-size: 1.4rem;
+}
+
+.post-categories {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .post-categories {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        z-index: 10;
+    }
+}
+
+.post-categories li {
+    padding: .5rem 2rem;
+    margin-right: 2rem;
+    border-radius: .5rem;
+}
+
+@media (min-width: 768px) {
+    .post-categories li {
+        background-color: var(--primaryColor);
+    }
+}
+
+.post-categories li a {
+    font-size: 2.2rem;
+    font-family: var(--mainFont);
+    color: var(--darkgrey);
+}
+
+@media (min-width: 768px) {
+    .post-categories li a {
+        color: var(--white);
+
+    }
+}
+
+.post-categories li:last-of-type {
+    margin-right: 0;
+}
+
+
 
 /* Sidebar Classes */
 .clase-sidebar {
@@ -449,6 +536,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     margin: 0;
     font-weight: 600;
     font-size: 1.6rem;
+}
+
+/*SIDEBAR*/
+.widget {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--lightGrey);
+}
+
+.widget:first-of-type {
+    border: none;
+}
+
+.widget:last-of-type {
+    padding-top: 0;
+}
+
+.widget a {
+    color: var(--black);
+}
+
+.widget a:hover {
+    color: var(--primaryColor);
 }
 
 /* Galery or Photos */

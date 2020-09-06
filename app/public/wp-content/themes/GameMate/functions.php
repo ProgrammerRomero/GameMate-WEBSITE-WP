@@ -11,6 +11,9 @@
         //Anable important or featured images
         add_theme_support('post-thumbnails');
 
+        //SEO TITLES
+        add_theme_support('title-tag');
+
         // Add Images to personalized sizes
         add_image_size('square', 350, 350, true);
         add_image_size('portrait', 350, 700, true);
