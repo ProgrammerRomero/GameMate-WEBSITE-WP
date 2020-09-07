@@ -4,6 +4,8 @@
 
     //Reuse Queries
     require get_template_directory() . '/inc/queries.php';
+    //Calling Shorcodes file
+    require get_template_directory() . '/inc/shortcodes.php';
 
     //when theme is activated
     function gamemate_setup() {
@@ -49,16 +51,30 @@
         //Load slick animation
         // wp_enqueue_style('slicknavCSS', 'https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css', array(), '1.0.0');
 
+        // LOADING CSS DATA
         if(is_page('blog')) : 
             wp_enqueue_style('lightboxCSS', get_template_directory_uri().'/css/lightbox.min.css' , array('normalize'), '2.11.3');
+        endif;
+
+
+        if(is_page('contact')) : 
+            wp_enqueue_style('leafletCSS', 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' , array('normalize'), '1.7.1');
         endif;
 
         wp_enqueue_style('slicknavCSS', get_template_directory_uri().'/css/slicknav.css' , array('normalize'), '1.0.10');
 
         wp_enqueue_script('slicknavJS', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '1.0.0', 'true'); 
 
+
+        // LOADING JAVA SCRIPT DATA
+        // blog is the Slug
         if(is_page('blog')) : 
         wp_enqueue_script('lightboxJS', get_template_directory_uri() . '/js/jquery.lightbox.min.js', array('jquery'), '2.11.3', 'true'); 
+        endif;
+
+        // contact is the Slug
+        if(is_page('contact')) : 
+        wp_enqueue_script('leaflet', 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.js', array(), '1.7.1', 'true'); 
         endif;
 
         wp_enqueue_script('scripts', get_template_directory_uri().'/js/script.js', array('jquery', 'slicknavJS'), '1.0.0', true);
