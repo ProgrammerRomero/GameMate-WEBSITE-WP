@@ -1,13 +1,13 @@
 
 <?php
 
-function gamemate_list_classes() { ?>
+function gamemate_list_classes($quantity = -1) { ?>
 
     <ul class="lista-clases">
         <?php
             $args = array(
                 'post_type' => 'gymfitness_clases',
-                'posts_per_page' => 10,
+                'posts_per_page' => $quantity,
                 'order_by' => 'title'
             );
             $classes = new WP_Query($args);

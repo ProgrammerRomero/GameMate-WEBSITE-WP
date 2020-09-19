@@ -105,5 +105,27 @@
     }
     add_action('widgets_init', 'gamemate_widgets');
     
-    
-    ?>
+  
+
+    // HERO IMAGE
+    function gamemate_hero_image() {
+        // Get ID
+        $front_page_id = get_option('page_on_front');
+        // Get Image ID
+        $id_image = get_field('image', $front_page_id);
+        // Get the Image
+        $image = wp_get_attachment_image_src($id_image, 'full')[0];
+        // Style CSS
+        wp_register_style('custom', false);
+        wp_enqueue_style('custom');
+
+        $imagen_destacada_css = "
+            body.home .site-header {
+                background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url($image);
+            }
+        ";
+        wp_add_inline_style('custom', $imagen_destacada_css);
+    }
+    add_action('init', 'gamemate_hero_image');
+
+?>
